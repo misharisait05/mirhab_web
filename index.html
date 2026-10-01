@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#382B3D">
+  <meta name="description" content="مِرحاب تطوّر وتدرّب فرق المطاعم والضيافة لتقديم تجربة ضيف تعكس هوية المكان، من معايير الخدمة إلى التطبيق والقياس.">
+  <title>مِرحاب | تدريب فرق الضيافة وتجربة الضيف</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/mirhab-logo-primary.png">
+  <style>
+    :root {
+      --ivory:#F5F0E7;
+      --lavender:#6D4A72;
+      --deep:#382B3D;
+      --sand:#CDBB9A;
+      --gold:#AD9362;
+      --paper:#FFFCF7;
+      --line:#DDD1BE;
+      --muted:#655B64;
+      --header-height:69px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--header-height)}
+    body{margin:0;background:var(--ivory);color:var(--deep);font-family:"Readex Pro",Tahoma,sans-serif;font-size:16px;line-height:1.85}
+    button,a{font:inherit}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    ::selection{background:var(--sand);color:var(--deep)}
+    .container{width:min(100% - 64px,1240px);margin-inline:auto}
+    .site-header{position:sticky;z-index:10;top:0;background:rgba(245,240,231,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(109,74,114,.12)}
+    .header-inner{min-height:68px;padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
+    .brand-logo{display:block;width:64px;height:52px}
+    .nav{display:flex;align-items:center;gap:clamp(16px,3vw,42px)}
+    .nav a{text-decoration:none;color:#544752;font-size:.88rem;font-weight:500;transition:color .2s}
+    .nav a:hover{color:var(--lavender)}
+    .nav .nav-highlight{border:1px solid var(--lavender);padding:8px 17px;border-radius:100px;color:var(--lavender)}
+    .nav .nav-highlight:hover{background:var(--lavender);color:white}
+    .hero{padding:clamp(20px,3svh,36px) 0 42px;overflow:hidden;min-height:calc(100svh - var(--header-height));display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:.96fr 1.04fr;gap:clamp(36px,5vw,76px);align-items:center}
+    .eyebrow{display:flex;align-items:center;gap:13px;color:var(--lavender);font-weight:600;font-size:.84rem;letter-spacing:.01em}
+    .eyebrow:before{content:"";display:block;width:34px;height:1px;background:var(--gold)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.quote-heading{font-family:"El Messiri","Readex Pro",sans-serif}
+    h1{font-size:clamp(2.6rem,min(5.4vw,8svh),5.6rem);line-height:1.18;letter-spacing:-.045em;margin:18px 0 20px;font-weight:600}
+    h1 em{font-style:normal;color:var(--lavender);position:relative}
+    h1 em:after{content:"";position:absolute;bottom:4px;right:1px;left:2px;border-bottom:2px solid var(--gold);transform:rotate(-1.5deg)}
+    .hero-lead{max-width:590px;color:#514650;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.9;margin-bottom:24px}
+    .primary-link{display:inline-flex;align-items:center;justify-content:center;background:var(--deep);border-radius:100px;padding:14px 29px;color:white;text-decoration:none;font-weight:500;min-height:54px;transition:background .2s,transform .2s}
+    .primary-link:hover{background:var(--lavender);transform:translateY(-2px)}
+    .hero-art{position:relative;padding:14px 0 0 28px}
+    .hero-art:before{content:"";position:absolute;inset:0 28px 27px 0;border:1px solid var(--gold);border-radius:240px 240px 24px 24px}
+    .hero-image{height:auto;aspect-ratio:1.08/1;max-height:calc(100svh - var(--header-height) - 105px);object-fit:cover;object-position:52% center;width:100%;border-radius:240px 240px 24px 24px;box-shadow:0 28px 70px rgba(56,43,61,.13);position:relative}
+    .art-caption{position:absolute;bottom:-25px;right:-20px;background:var(--lavender);color:white;border-radius:9px;padding:13px 23px;font-family:"El Messiri",sans-serif;font-size:1.08rem;box-shadow:0 16px 35px rgba(56,43,61,.16)}
+    .ticker{border-block:1px solid var(--line);background:#EDE5D9}
+    .ticker-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:17px 0;color:var(--lavender);font-size:.87rem;font-weight:600}
+    .ticker-inner span+span:before{content:"✦";font-size:.62rem;color:var(--gold);margin-left:clamp(10px,4vw,55px)}
+    .section{padding:clamp(76px,9vw,125px) 0}
+    .section-head{max-width:700px;margin-bottom:46px}
+    .section-label{color:var(--lavender);font-weight:700;font-size:.82rem;margin:0 0 16px;letter-spacing:.025em}
+    h2{font-size:clamp(2.3rem,4.6vw,4.6rem);line-height:1.3;font-weight:600;letter-spacing:-.025em;margin-bottom:20px}
+    .section-intro{color:var(--muted);font-size:1.08rem;max-width:700px}
+    .about-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,8vw,125px);align-items:center}
+    .about-copy p:not(.section-label){font-size:1.13rem;color:#534852;max-width:610px}
+    .about-visual{min-height:400px;border-radius:220px 220px 15px 15px;background:var(--sand);position:relative;display:flex;align-items:center;justify-content:center;padding:65px 55px;overflow:hidden}
+    .about-visual:before{content:"";position:absolute;inset:18px;border:1px solid rgba(56,43,61,.28);border-radius:205px 205px 10px 10px}
+    .about-visual:after{content:"";position:absolute;width:270px;height:270px;border:1px solid rgba(56,43,61,.2);border-radius:50%;bottom:-100px;left:-100px}
+    .about-visual blockquote{position:relative;font-family:"El Messiri",sans-serif;font-size:clamp(1.75rem,3vw,2.8rem);line-height:1.65;text-align:center;color:var(--deep);margin:0;font-weight:600}
+    .about-visual blockquote:before{content:"“";display:block;font-family:serif;font-size:4.5rem;line-height:.8;color:var(--lavender)}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .pill-row span{border:1px solid var(--line);border-radius:100px;padding:5px 15px;color:var(--lavender);font-size:.84rem;background:rgba(255,255,255,.4)}
+    .dark-section{background:var(--deep);color:white;position:relative;overflow:hidden}
+    .dark-section:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(205,187,154,.2);border-radius:50%;left:-160px;top:-160px;box-shadow:0 0 0 90px rgba(205,187,154,.025),0 0 0 180px rgba(205,187,154,.018)}
+    .dark-section .container{position:relative;z-index:1}
+    .dark-section .section-label{color:var(--sand)}
+    .dark-section h2{max-width:820px}
+    .dark-section .section-intro{color:#DAD0DB}
+    .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:55px;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.18)}
+    .problem{background:var(--deep);padding:30px 30px 34px;min-height:205px}
+    .problem small{font-size:.75rem;color:var(--sand)}
+    .problem h3{font-family:"El Messiri",sans-serif;font-size:1.55rem;margin:10px 0 8px}
+    .problem p{color:#D3C7D4;font-size:.9rem;line-height:1.85;margin-bottom:0}
+    .approach{background:var(--paper)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .step{min-height:235px;background:var(--ivory);padding:25px 24px;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column}
+    .step:nth-child(2),.step:nth-child(5){background:#EAE0E9}
+    .step:nth-child(7){background:var(--lavender);color:white;border-color:var(--lavender)}
+    .step-number{color:var(--gold);font-size:.89rem;font-weight:700;direction:ltr;text-align:right}
+    .step h3{font-family:"El Messiri",sans-serif;font-size:1.64rem;margin:auto 0 7px;line-height:1.35}
+    .step p{font-size:.9rem;line-height:1.7;margin:0;color:var(--muted)}
+    .step:nth-child(7) p{color:#F1EAF1}
+    .steps-note{margin:26px 0 0;color:var(--lavender);font-weight:500}
+    .roles{background:#EAE0E9}
+    .role-layout{display:grid;grid-template-columns:310px 1fr;gap:28px;align-items:stretch}
+    .role-tabs{display:flex;flex-direction:column;gap:8px}
+    .role-tab{background:transparent;color:var(--deep);border:1px solid transparent;border-radius:9px;text-align:right;padding:13px 18px;cursor:pointer;font-weight:500;transition:background .2s,transform .2s,border-color .2s}
+    .role-tab:hover{border-color:#CCBCCC}
+    .role-tab[aria-selected="true"]{background:var(--paper);border-color:#D9C9D9;box-shadow:0 7px 22px rgba(56,43,61,.07);color:var(--lavender);transform:translateX(-4px)}
+    .role-panel{background:var(--paper);border-radius:16px;min-height:350px;padding:clamp(32px,5vw,66px);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+    .role-panel:after{content:"";position:absolute;border:1px solid var(--line);width:220px;height:220px;border-radius:50%;bottom:-100px;left:-70px}
+    .role-panel small{color:var(--lavender);font-weight:700;position:relative;z-index:1}
+    .role-panel h3{font-family:"El Messiri",sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.3;margin:16px 0;position:relative;z-index:1}
+    .role-panel p{color:var(--muted);max-width:600px;font-size:1.15rem;position:relative;z-index:1}
+    .role-panel .role-note{font-size:.85rem;margin:20px 0 0;color:var(--lavender)}
+    .deliverables{background:var(--paper)}
+    .deliver-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+    .deliver-card{border-top:2px solid var(--lavender);background:var(--ivory);padding:28px 27px 33px;min-height:260px;display:flex;flex-direction:column}
+    .deliver-icon{width:45px;height:45px;border:1px solid var(--gold);border-radius:100%;display:grid;place-items:center;color:var(--lavender);font-family:"El Messiri",sans-serif;font-size:1.2rem}
+    .deliver-card h3{font-family:"El Messiri",sans-serif;font-size:1.6rem;margin:35px 0 9px}
+    .deliver-card p{color:var(--muted);font-size:.94rem;margin:0}
+    .roles,.deliverables{padding:clamp(20px,3svh,36px) 0}
+    .roles .section-head,.deliverables .section-head{max-width:940px;margin-bottom:20px}
+    .roles .section-label,.deliverables .section-label{margin-bottom:8px}
+    .roles h2,.deliverables h2{font-size:clamp(1.75rem,min(3.5vw,6svh),3.4rem);line-height:1.25;margin-bottom:12px}
+    .roles .section-intro,.deliverables .section-intro{max-width:850px;font-size:1rem;line-height:1.8;margin-bottom:0}
+    .roles .role-layout{grid-template-columns:260px 1fr;gap:24px}
+    .roles .role-tab{padding:9px 16px;line-height:1.5}
+    .roles .role-panel{min-height:clamp(220px,36svh,300px);padding:clamp(24px,3svh,36px)}
+    .roles .role-panel h3{font-size:clamp(2rem,4.5svh,3rem);margin:12px 0}
+    .roles .role-panel p{font-size:1rem;line-height:1.8;margin-bottom:0}
+    .roles .role-panel .role-note{font-size:.85rem;margin-top:16px}
+    .deliverables .deliver-card{min-height:clamp(190px,32svh,250px);padding:22px}
+    .deliverables .deliver-card h3{margin-top:20px;font-size:1.4rem;line-height:1.4}
+    .impact{background:var(--lavender);color:white;text-align:center;padding:75px 0 90px}
+    .impact .section-label{color:var(--sand)}
+    .impact h2{max-width:800px;margin:0 auto 35px}
+    .impact-list{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .impact-list span{border:1px solid rgba(255,255,255,.4);border-radius:100px;padding:8px 17px;font-size:.88rem}
+    .socials{background:var(--ivory)}
+    .social-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .social-grid li{min-width:0}
+    .social-card{min-height:185px;height:100%;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--lavender);border-radius:11px;text-decoration:none;padding:24px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .social-card:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(56,43,61,.1);border-color:var(--lavender)}
+    .social-platform{font-size:1.38rem;font-weight:600;line-height:1.3;color:var(--deep)}
+    .social-handle{font-size:.88rem;color:var(--lavender);font-weight:500;direction:ltr;text-align:right}
+    .site-footer{background:var(--deep);color:#F0E8ED;padding:49px 0 32px}
+    .footer-top{display:flex;align-items:end;justify-content:space-between;gap:30px;padding-bottom:43px;border-bottom:1px solid rgba(255,255,255,.17)}
+    .footer-top p{margin:0;color:#D1C3D0;font-size:.92rem}
+    .footer-logo-wrap{background:var(--ivory);border-radius:13px;padding:5px 13px;width:142px;margin-bottom:12px}
+    .footer-logo{width:100%;height:auto}
+    .footer-saying{font-family:"El Messiri",sans-serif;font-size:1.65rem;text-align:left}
+    .footer-bottom{padding-top:25px;color:#B8AAB6;font-size:.77rem;display:flex;justify-content:space-between;gap:20px}
+    @media(prefers-reduced-motion:no-preference){
+      .motion-ready [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .72s cubic-bezier(.22,1,.36,1),transform .72s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
+      .motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
+      .steps .step:nth-child(2),.problem:nth-child(2),.deliver-card:nth-child(2),.social-grid li:nth-child(2){--reveal-delay:75ms}
+      .steps .step:nth-child(3),.problem:nth-child(3),.deliver-card:nth-child(3),.social-grid li:nth-child(3){--reveal-delay:150ms}
+      .steps .step:nth-child(4),.social-grid li:nth-child(4){--reveal-delay:225ms}
+      .steps .step:nth-child(5){--reveal-delay:75ms}
+      .steps .step:nth-child(6){--reveal-delay:150ms}
+      .steps .step:nth-child(7){--reveal-delay:225ms}
+    }
+    @media(max-width:960px){
+      .hero-grid,.about-layout{grid-template-columns:1fr 1fr;gap:35px}
+      h1{font-size:clamp(2.6rem,min(5.4vw,8svh),4.6rem)}
+      .hero-image{aspect-ratio:1/1.13}
+      .steps{grid-template-columns:repeat(3,1fr)}
+      .social-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:720px){
+      :root{--header-height:81px}
+      .container{width:min(100% - 36px,1240px)}
+      .header-inner{min-height:0;padding:8px 0;gap:12px}
+      .brand{margin-bottom:0}
+      .brand-logo{width:44px;height:36px}
+      .nav{flex:1;justify-content:flex-end;gap:6px 8px;flex-wrap:wrap}
+      .nav::-webkit-scrollbar{display:none}
+      .nav a{font-size:.76rem}
+      .nav .nav-highlight{padding:3px 8px}
+      .hero{padding:20px 0 30px;min-height:0}
+      .hero-grid,.about-layout{grid-template-columns:1fr}
+      .hero-grid{gap:20px}
+      h1{font-size:clamp(2rem,min(8vw,5.5svh),3.5rem);margin:10px 0}
+      .hero-lead{font-size:.9rem;line-height:1.7;margin-bottom:14px}
+      .hero-art{margin-left:8px;padding-left:12px;width:min(100%,260px,30svh);justify-self:center}
+      .hero-art:before{inset:0 12px 18px 0}
+      .hero-image{aspect-ratio:1.3/1;border-radius:180px 180px 18px 18px}
+      .art-caption{right:0;bottom:-12px;font-size:.8rem;padding:6px 12px}
+      .ticker-inner{justify-content:center;flex-wrap:wrap;gap:4px 15px;text-align:center;padding:15px 0}
+      .ticker-inner span+span:before{margin-left:14px}
+      .section{padding:76px 0}
+      .about-layout{gap:38px}
+      .about-visual{min-height:320px}
+      .problem-grid{grid-template-columns:1fr}
+      .problem{min-height:auto}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .step{min-height:210px;padding:18px}
+      .role-layout{grid-template-columns:1fr}
+      .role-tabs{display:flex;flex-direction:row;overflow-x:auto;scrollbar-width:none;padding:2px 3px 9px;white-space:nowrap}
+      .role-tab{flex:none;padding:8px 12px}
+      .role-tab[aria-selected="true"]{transform:none}
+      .role-panel{min-height:300px}
+      .deliver-grid{grid-template-columns:1fr}
+      .deliver-card{min-height:210px}
+      .deliver-card h3{margin-top:25px}
+      .roles,.deliverables{padding:16px 0}
+      .roles .section-head,.deliverables .section-head{margin-bottom:14px}
+      .roles h2,.deliverables h2{font-size:clamp(1.5rem,4svh,1.9rem);margin-bottom:8px}
+      .roles .section-intro,.deliverables .section-intro{font-size:.85rem;line-height:1.65}
+      .roles .role-layout{grid-template-columns:1fr;gap:10px}
+      .roles .role-tabs{flex-wrap:wrap;overflow:visible;gap:5px;padding:0;white-space:normal}
+      .roles .role-tab{padding:6px 10px;font-size:.85rem}
+      .roles .role-panel{min-height:0;padding:18px}
+      .roles .role-panel h3{font-size:1.8rem;margin:8px 0}
+      .roles .role-panel p{font-size:.9rem;line-height:1.7}
+      .roles .role-panel .role-note{font-size:.78rem;margin-top:12px}
+      .deliverables .deliver-grid{gap:8px}
+      .deliverables .deliver-card{min-height:0;padding:12px 14px;display:grid;grid-template-columns:32px 1fr;column-gap:12px;align-items:start}
+      .deliverables .deliver-icon{width:32px;height:32px;font-size:1rem;grid-row:1 / 3}
+      .deliverables .deliver-card h3{font-size:1.15rem;margin:0 0 4px}
+      .deliverables .deliver-card p{font-size:.82rem;line-height:1.65;grid-column:2}
+      .social-card{min-height:150px}
+      .footer-top{align-items:start;flex-direction:column}
+      .footer-saying{text-align:right}
+    }
+    @media(max-width:440px){
+      .hero-image{aspect-ratio:1/1;border-radius:150px 150px 15px 15px}
+      .steps{grid-template-columns:1fr}
+      .step{min-height:155px}
+      .social-grid{gap:9px}
+      .social-card{padding:18px;min-height:138px}
+      .social-platform{font-size:1.14rem}
+      .social-handle{font-size:.82rem}
+      .ticker-inner span+span:before{content:none}
+      .ticker-inner span{width:100%}
+      .footer-bottom{flex-direction:column;gap:3px}
+    }
+    @media(min-width:721px) and (max-height:600px){
+      .roles .role-tabs{gap:6px}
+      .roles .role-tab{padding:8px 16px}
+      .roles .role-panel{min-height:0;padding:20px}
+      .roles .role-panel h3{font-size:1.85rem;margin:8px 0}
+      .roles .role-panel .role-note{margin-top:12px}
+    }
+    @media(max-width:360px) and (max-height:700px){
+      .header-inner{padding:6px 0}
+      .brand-logo{width:40px;height:32px}
+      .hero{padding:14px 0 22px}
+      .hero-grid{gap:12px}
+      .hero-art{width:min(100%,21svh)}
+      h1{font-size:1.75rem}
+      .primary-link{min-height:44px;padding:10px 24px}
+      .roles,.deliverables{padding:8px 0}
+      .roles .section-head,.deliverables .section-head{margin-bottom:10px}
+      .roles .section-label,.deliverables .section-label{margin-bottom:6px}
+      .roles h2,.deliverables h2{font-size:1.35rem}
+      .roles .section-intro,.deliverables .section-intro{font-size:.8rem;line-height:1.55}
+      .roles .role-tab{font-size:.8rem;padding:5px 8px}
+      .roles .role-panel{padding:14px}
+      .roles .role-panel h3{font-size:1.6rem}
+      .roles .role-panel p{font-size:.85rem;line-height:1.55}
+      .roles .role-panel .role-note{font-size:.75rem}
+      .deliverables .deliver-card{padding:8px 10px;grid-template-columns:24px 1fr;column-gap:8px}
+      .deliverables .deliver-icon{width:24px;height:24px;font-size:.9rem;grid-row:auto}
+      .deliverables .deliver-card h3{font-size:1.05rem}
+      .deliverables .deliver-card p{grid-column:1 / -1}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary-link,.nav a,.role-tab,.social-card{transition:none}}
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="مِرحاب، العودة إلى أعلى الصفحة"><svg class="brand-logo" viewBox="140 34 230 186" width="64" height="52" aria-hidden="true" focusable="false"><image href="assets/mirhab-logo-primary.png" width="507" height="461" /></svg></a>
+      <nav class="nav" aria-label="القائمة الرئيسية">
+        <a href="#about">عن مِرحاب</a>
+        <a href="#approach">منهجنا</a>
+        <a href="#roles">من ندرّب؟</a>
+        <a class="nav-highlight" href="#deliverables">المخرجات</a>
+        <a href="#socials">حساباتنا</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">تدريب فرق الضيافة وتجربة الضيف</div>
+          <h1 id="hero-title">لكل مكان <em>أسلوبه</em><br>في الضيافة.</h1>
+          <p class="hero-lead">نحوّل هوية مطعمك إلى معايير خدمة وسلوكيات عملية يتقنها الفريق، لتصبح تجربة الضيف امتدادًا حقيقيًا لشخصية المكان.</p>
+          <a class="primary-link" href="#approach">تعرّف على منهجنا</a>
+        </div>
+        <div class="hero-art">
+          <img class="hero-image" src="assets/mirhab-cover.jpg" alt="هوية مِرحاب البصرية مع رمز الباب المفتوح والخزامى ودلّة الضيافة" width="1408" height="768">
+          <div class="art-caption">ضيافتك. بطريقتك.</div>
+        </div>
+      </div>
+    </section>
+    <div class="ticker" aria-label="مرتكزات مِرحاب"><div class="container ticker-inner"><span>هوية المكان</span><span>سلوك الفريق</span><span>تجربة الضيف</span><span>الانطباع الأخير</span></div></div>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div class="about-copy" data-reveal>
+          <p class="section-label">عن مِرحاب</p>
+          <h2 id="about-title">الخدمة التي تشبه علامتك تبدأ من فريقك.</h2>
+          <p>مِرحاب متخصصة في تطوير وتدريب فرق المطاعم والضيافة. نبدأ بفهم هوية المنشأة وتوجهها وتجربة الضيف التي تريد تقديمها، ثم نترجم ذلك إلى معايير خدمة واضحة وتدريب عملي يناسب أدوار الفريق.</p>
+          <p>لأن تفاصيل الترحيب والتواصل والتعامل مع المواقف المختلفة هي ما يجعل وعد العلامة ملموسًا في كل زيارة.</p>
+          <div class="pill-row" aria-label="قيم مِرحاب"><span>الحفاوة</span><span>الأصالة</span><span>الإتقان</span><span>التخصيص</span><span>الاحترافية</span></div>
+        </div>
+        <div class="about-visual" data-reveal><blockquote>نصنع مع فريقك تجربة ضيافة تشبه مكانك.</blockquote></div>
+      </div>
+    </section>
+    <section class="section dark-section" aria-labelledby="problem-title">
+      <div class="container">
+        <p class="section-label">لماذا مِرحاب؟</p>
+        <h2 id="problem-title" data-reveal>الضيف لا يفصل بين الموظف والمطعم.</h2>
+        <p class="section-intro" data-reveal>عندما تتغير الخدمة بتغيّر الموظف أو الوردية، تصبح تجربة الضيف بعيدة عن هوية المكان. نبني مرجعًا مشتركًا يقرّب سلوك الفريق من الوعد الذي تقدمه العلامة.</p>
+        <div class="problem-grid">
+          <article class="problem" data-reveal><small>01 / الاتساق</small><h3>تجربة واحدة في كل زيارة</h3><p>معايير واضحة تقلل تفاوت الخدمة بين أفراد الفريق والورديات.</p></article>
+          <article class="problem" data-reveal><small>02 / الهوية</small><h3>خدمة تحمل شخصية المكان</h3><p>نحوّل هوية المطعم إلى أسلوب استقبال وتواصل وتفاصيل قابلة للتطبيق.</p></article>
+          <article class="problem" data-reveal><small>03 / التطبيق</small><h3>تدريب يتجاوز الشرح</h3><p>مواقف ومحاكاة وتقييم تساعد الفريق على أداء الخدمة بثقة.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head" data-reveal><p class="section-label">منهجنا</p><h2 id="approach-title">من فهم المكان إلى أثر يمكن قياسه.</h2><p class="section-intro">برنامج مخصص لكل مطعم، يجمع بين تصميم المعايير والتدريب بحسب الدور والتطبيق العملي.</p></div>
+        <div class="steps">
+          <article class="step" data-reveal><span class="step-number">01</span><h3>نفهم</h3><p>نتعرّف على هوية المنشأة وتجربة الضيف المطلوبة.</p></article>
+          <article class="step" data-reveal><span class="step-number">02</span><h3>نقيّم</h3><p>نرصد مستوى الفريق الحالي والفجوات في الخدمة.</p></article>
+          <article class="step" data-reveal><span class="step-number">03</span><h3>نصمّم</h3><p>نضع المعايير والسيناريوهات المناسبة للمكان.</p></article>
+          <article class="step" data-reveal><span class="step-number">04</span><h3>ندرّب</h3><p>نقدّم تدريبًا عمليًا مخصصًا لمسؤوليات كل دور.</p></article>
+          <article class="step" data-reveal><span class="step-number">05</span><h3>نطبّق</h3><p>نحاكي مواقف حقيقية من رحلة الضيف.</p></article>
+          <article class="step" data-reveal><span class="step-number">06</span><h3>نقيس</h3><p>نقارن الأداء قبل التدريب وبعده.</p></article>
+          <article class="step" data-reveal><span class="step-number">07</span><h3>نسلّم</h3><p>دليل الخدمة، تقرير التقييم وشهادات الإتمام.</p></article>
+        </div>
+        <p class="steps-note">لا نعلّم طريقة واحدة للخدمة؛ نعلّم فريقك طريقتك في الخدمة.</p>
+      </div>
+    </section>
+    <section class="section roles" id="roles" aria-labelledby="roles-title">
+      <div class="container">
+        <div class="section-head" data-reveal><p class="section-label">من ندرّب؟</p><h2 id="roles-title">كل دور يصنع جزءًا من الانطباع.</h2><p class="section-intro">يمتد البرنامج عبر فريق الواجهة الأمامية للمطعم، بمحتوى يتغير حسب مسؤولية كل شخص في رحلة الضيف.</p></div>
+        <div class="role-layout" data-reveal>
+          <div class="role-tabs" role="tablist" aria-label="الأدوار في فريق الضيافة">
+            <button class="role-tab" id="tab-host" type="button" role="tab" aria-selected="true" aria-controls="role-panel" data-role="host">الاستقبال</button>
+            <button class="role-tab" id="tab-server" type="button" role="tab" aria-selected="false" aria-controls="role-panel" data-role="server" tabindex="-1">مقدمو الخدمة</button>
+            <button class="role-tab" id="tab-cashier" type="button" role="tab" aria-selected="false" aria-controls="role-panel" data-role="cashier" tabindex="-1">الكاشير</button>
+            <button class="role-tab" id="tab-supervisor" type="button" role="tab" aria-selected="false" aria-controls="role-panel" data-role="supervisor" tabindex="-1">مشرفو الصالة</button>
+            <button class="role-tab" id="tab-manager" type="button" role="tab" aria-selected="false" aria-controls="role-panel" data-role="manager" tabindex="-1">مدراء الفروع</button>
+          </div>
+          <div class="role-panel" id="role-panel" role="tabpanel" aria-labelledby="tab-host" tabindex="0" aria-live="polite">
+            <small id="role-index">01 / بداية الرحلة</small>
+            <h3 id="role-title">الاستقبال</h3>
+            <p id="role-description">الترحيب، صناعة الانطباع الأول، وإدارة الانتظار بما يعكس روح المكان.</p>
+            <p class="role-note">تدريب بحسب الدور، ضمن تجربة خدمة واحدة متكاملة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section deliverables" id="deliverables" aria-labelledby="deliver-title">
+      <div class="container">
+        <div class="section-head" data-reveal><p class="section-label">المخرجات</p><h2 id="deliver-title">أدوات تبقى مع الفريق بعد التدريب.</h2><p class="section-intro">لا ينتهي العمل عند آخر جلسة. يحصل المطعم على مراجع تساعده في ترسيخ المعايير ومتابعة التطور.</p></div>
+        <div class="deliver-grid">
+          <article class="deliver-card" data-reveal><span class="deliver-icon" aria-hidden="true">١</span><h3>دليل معايير الخدمة</h3><p>مرجع عملي لأسلوب الخدمة والسلوكيات التي تعكس هوية المطعم.</p></article>
+          <article class="deliver-card" data-reveal><span class="deliver-icon" aria-hidden="true">٢</span><h3>تقرير تقييم الفريق</h3><p>عرض للنتائج والفجوات والتوصيات، مع مقارنة مستوى الفريق قبل التدريب وبعده.</p></article>
+          <article class="deliver-card" data-reveal><span class="deliver-icon" aria-hidden="true">٣</span><h3>شهادات الإتمام</h3><p>إثبات لإتمام أعضاء الفريق البرنامج التدريبي المخصص لهم.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="impact" aria-labelledby="impact-title">
+      <div class="container" data-reveal><p class="section-label">الأثر الذي نستهدفه</p><h2 id="impact-title">من اجتهادات فردية إلى ضيافة تحمل شخصية المكان.</h2><div class="impact-list"><span>خدمة أكثر اتساقًا</span><span>فريق أكثر ثقة</span><span>تعامل أفضل مع الشكاوى</span><span>تجربة أقرب لهوية المطعم</span></div></div>
+    </section>
+    <section class="section socials" id="socials" aria-labelledby="socials-title">
+      <div class="container">
+        <div class="section-head" data-reveal><p class="section-label">حساباتنا</p><h2 id="socials-title">تابع مِرحاب.</h2><p class="section-intro">تجدنا على منصات التواصل باسم واحد: <span lang="en" dir="ltr">@withmirhab</span></p></div>
+        <ul class="social-grid">
+          <li data-reveal><a class="social-card" href="https://x.com/withmirhab" target="_blank" rel="noopener noreferrer" aria-label="حساب مِرحاب على X، يفتح في نافذة جديدة"><span class="social-platform" lang="en" dir="ltr">X</span><span class="social-handle" lang="en">@withmirhab</span></a></li>
+          <li data-reveal><a class="social-card" href="https://www.instagram.com/withmirhab" target="_blank" rel="noopener noreferrer" aria-label="حساب مِرحاب على إنستغرام، يفتح في نافذة جديدة"><span class="social-platform" lang="en" dir="ltr">Instagram</span><span class="social-handle" lang="en">@withmirhab</span></a></li>
+          <li data-reveal><a class="social-card" href="https://www.linkedin.com/company/withmirhab/" target="_blank" rel="noopener noreferrer" aria-label="صفحة مِرحاب على لينكدإن، تفتح في نافذة جديدة"><span class="social-platform" lang="en" dir="ltr">LinkedIn</span><span class="social-handle" lang="en">@withmirhab</span></a></li>
+          <li data-reveal><a class="social-card" href="https://www.tiktok.com/@withmirhab" target="_blank" rel="noopener noreferrer" aria-label="حساب مِرحاب على تيك توك، يفتح في نافذة جديدة"><span class="social-platform" lang="en" dir="ltr">TikTok</span><span class="social-handle" lang="en">@withmirhab</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div><div class="footer-logo-wrap"><img class="footer-logo" src="assets/mirhab-logo-primary.png" alt="مِرحاب | MIRHAB" width="507" height="461"></div><p>Hospitality Training &amp; Experience</p></div><div class="footer-saying">لكل مكان أسلوبه في الضيافة.</div></div><div class="footer-bottom"><span>© 2026 مِرحاب</span><span>ضيافة دافئة، أصيلة، ومتقنة.</span></div></div></footer>
+  <script>
+    const header = document.querySelector('.site-header');
+    function updateHeaderHeight() {
+      document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+    }
+    updateHeaderHeight();
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(updateHeaderHeight).observe(header);
+    } else {
+      window.addEventListener('resize', updateHeaderHeight);
+    }
+    const roles = {
+      host: {index:'01 / بداية الرحلة', title:'الاستقبال', description:'الترحيب، صناعة الانطباع الأول، وإدارة الانتظار بما يعكس روح المكان.'},
+      server: {index:'02 / أثناء التجربة', title:'مقدمو الخدمة', description:'التواصل مع الضيف، أسلوب تقديم الخدمة، ومعرفة القائمة بطريقة تنسجم مع هوية المطعم.'},
+      cashier: {index:'03 / ختام الزيارة', title:'الكاشير', description:'إنهاء التجربة بوضوح وسرعة وحفاوة، حتى تبقى اللحظة الأخيرة جزءًا من الانطباع الجيد.'},
+      supervisor: {index:'04 / قيادة الصالة', title:'مشرفو الصالة', description:'متابعة تطبيق المعايير في الوردية، ودعم الفريق عندما تتغير المواقف أو تظهر شكوى.'},
+      manager: {index:'05 / استمرارية الخدمة', title:'مدراء الفروع', description:'ترسيخ ثقافة الخدمة ومتابعة استمراريتها عبر الفريق والورديات.'}
+    };
+    const tabs = [...document.querySelectorAll('.role-tab')];
+    const panel = document.getElementById('role-panel');
+    function selectRole(tab, focus = false) {
+      tabs.forEach(item => {const active = item === tab; item.setAttribute('aria-selected', String(active)); item.tabIndex = active ? 0 : -1;});
+      const role = roles[tab.dataset.role];
+      document.getElementById('role-index').textContent = role.index;
+      document.getElementById('role-title').textContent = role.title;
+      document.getElementById('role-description').textContent = role.description;
+      panel.setAttribute('aria-labelledby', tab.id);
+      if (focus) tab.focus();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectRole(tab));
+      tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowLeft') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowRight') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next !== undefined) {event.preventDefault();selectRole(tabs[next], true);}
+      });
+    });
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealItems = [...document.querySelectorAll('[data-reveal]')];
+      document.documentElement.classList.add('motion-ready');
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.08, rootMargin: '0px 0px -24px 0px'});
+      revealItems.forEach(item => revealObserver.observe(item));
+    }
+  </script>
+</body>
+</html>
